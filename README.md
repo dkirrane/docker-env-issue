@@ -1,21 +1,9 @@
-### Build both Dockerfiles
+### run both db and web conatiners
 ```
-docker build -t dkirrane/db ./db
-docker build -t dkirrane/web ./web
-```
-
-### Run db container interactive mode in a Terminal
-```
-docker run -it --rm -p 8080:8080 --name="db" dkirrane/db
+fig up
 ```
 
-### In another Terminal run web container and link it to "db" container
-
-```
-docker run --rm --name="web" --link=db:db dkirrane/web
-```
-
-### ERROR - The output of CHILD_DB_PORT is incorrect
+### ERROR - The output of the LOOKUPLOCATORS environment variable is incorrect
 ```
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 HOSTNAME=31603fa1981e

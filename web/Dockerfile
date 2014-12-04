@@ -4,16 +4,12 @@
 #
 FROM ubuntu
 RUN apt-get -yqq update
-
-ENV DATE 1
+ENV REFRESHED_AT 2014-DEC-04
 
 COPY env.sh /opt/env.sh
 RUN chmod 777 /opt/env.sh
 
-#ENV CHILD_DB_PORT $DB_PORT
-
 EXPOSE 3000
 
-# CMD ["env"]
 ENTRYPOINT ["/opt/env.sh"]
 CMD ["env"]
