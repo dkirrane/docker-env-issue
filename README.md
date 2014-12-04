@@ -3,4 +3,4 @@
 fig up
 ```
 
-### ISSUE - The output of the web container should is doesn't have any of the db environment variables
+### ISSUE - The output of the web container does not have any of the db environment variables
